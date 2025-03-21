@@ -16,13 +16,12 @@
         .header {
             background-color: #333;
             color: white;
-            padding: 20px 0;
+            padding: 10px 0;
             text-align: center;
         }
 
         .menu-container {
             width: 90%;
-            max-width: 1200px;
             margin: 0 auto;
             padding-top: 20px;
         }
@@ -44,10 +43,10 @@
             color: #333;
         }
 
-        /* Three-column grid layout for desktop view */
+        /* Two-column grid layout for video items */
         .menu-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+            grid-template-columns: repeat(2, 1fr); /* Two equal columns */
             gap: 20px;
         }
 
@@ -64,49 +63,34 @@
             transform: scale(1.05);
         }
 
-        .menu-item img {
-            width: 100%; /* Make images responsive */
-            max-width: 300px; /* Limit image size */
+        .menu-item video {
+            width: 100%; /* Make videos responsive */
+            max-width: 300px; /* Limit video size */
             height: auto;
             border-radius: 8px;
         }
 
-        .item-name {
+        .nav-links {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0 0;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #28a745;
             font-size: 18px;
             font-weight: bold;
-            margin: 10px 0;
         }
 
-        .item-price {
-            font-size: 16px;
-            color: #28a745;
-            margin: 10px 0;
-        }
-
-        .add-to-cart {
-            background-color: #28a745;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        .add-to-cart:hover {
-            background-color: #218838;
+        .nav-links a:hover {
+            color: #218838;
         }
 
         /* Responsive Design: Stack columns on smaller screens */
         @media (max-width: 768px) {
             .menu-grid {
-                grid-template-columns: repeat(2, 1fr); /* Two columns for tablets */
-            }
-        }
-
-        @media (max-width: 480px) {
-            .menu-grid {
-                grid-template-columns: 1fr; /* Stack items in one column for mobile */
+                grid-template-columns: 1fr; /* Stack items in one column */
             }
         }
     </style>
@@ -121,167 +105,117 @@
     <div class="menu-container">
         <h1>Our Menu</h1>
 
-        <!-- Desserts Section -->
+        <!-- Starters Section -->
         <div class="menu-section">
-            <h2>DESSERTS</h2>
             <div class="menu-grid">
-                <!-- Dessert Items -->
                 <div class="menu-item">
-                    <img src="https://images.immediate.co.uk/production/volatile/sites/2/2021/01/HoneyMadeleines_c_AdamGibson-3e5b16a.jpg?quality=90&webp=true&resize=1100,733" alt="Honey madeleines">
-                    <h4 class="item-name">Honey madeleines</h4>
-                    <p class="item-price">$12.99</p>
-                    <button class="add-to-cart" onclick="addToCart('Honey madeleines', 12.99)">Add to Cart</button>
+                    <video autoplay muted loop>
+                        <source src="https://videos.pexels.com/video-files/5747588/5747588-uhd_2560_1440_25fps.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <ul class="nav-links">
+                        <li><a href="Starters.html">Starters</a></li>
+                    </ul>
                 </div>
-
                 <div class="menu-item">
-                    <img src="https://th-i.thgim.com/public/incoming/vricut/article65937264.ece/alternates/LANDSCAPE_1200/Spicy%20Venue-apricot%20delight.jpg" alt="apricot delight">
-                    <h4 class="item-name">apricot delight</h4>
-                    <p class="item-price">$12.99</p>
-                    <button class="add-to-cart" onclick="addToCart('apricot delight', 12.99)">Add to Cart</button>
+                    <video autoplay muted loop>
+                        <source src="https://video-previews.elements.envatousercontent.com/1ff44a61-0279-4af6-8a89-6f656a9037d0/watermarked_preview/watermarked_preview.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <ul class="nav-links">
+                        <li><a href="Fast Food.html">Fast Food</a></li>
+                    </ul>
                 </div>
-
-                <!-- Repeat similar blocks for other dessert items -->
             </div>
         </div>
 
-        <!-- Fast Food Section -->
+        <!-- Biryanis Section -->
         <div class="menu-section">
-            <h2>FAST FOOD</h2>
             <div class="menu-grid">
                 <div class="menu-item">
-                    <img src="https://i.pinimg.com/enabled_lo/236x/7b/69/ea/7b69ea839992e50e1d570d2c56bf70ab.jpg" alt="Noodles">
-                    <h4 class="item-name">Noodles</h4>
-                    <p class="item-price">$3.95</p>
-                    <button class="add-to-cart" onclick="addToCart('Noodles', 3.95)">Add to Cart</button>
+                    <video autoplay muted loop>
+                        <source src="https://media.istockphoto.com/id/1511074526/video/delicious-chicken-biriyani-on-a-white-plate-indian-style-chicken-biryani-with-egg-and-yogurt.mp4?s=mp4-640x640-is&k=20&c=OiQBZSfnorRCUVBLhVS1z2WeVQ-b3RDaW-97SY3UDKc=" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <ul class="nav-links">
+                        <li><a href="Biryanis.html">Biryanis</a></li>
+                    </ul>
                 </div>
-
                 <div class="menu-item">
-                    <img src="https://i.pinimg.com/236x/b9/ff/32/b9ff32c78f37aae474dded1be3d48d45.jpg" alt="Fried Rice">
-                    <h4 class="item-name">Fried Rice</h4>
-                    <p class="item-price">$4.95</p>
-                    <button class="add-to-cart" onclick="addToCart('Fried Rice', 4.95)">Add to Cart</button>
+                    <video autoplay muted loop>
+                        <source src="https://assets.mixkit.co/active_storage/video_items/100348/1723062327/100348-video-720.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <ul class="nav-links">
+                        <li><a href="Salad.html">Salad</a></li>
+                    </ul>
                 </div>
-
-                <!-- Repeat similar blocks for other fast food items -->
             </div>
         </div>
 
-        <!-- Non-Veg Starters Section -->
+        <!-- Deserts Section -->
         <div class="menu-section">
-            <h2>NON-VEG STARTERS</h2>
             <div class="menu-grid">
                 <div class="menu-item">
-                    <img src="https://i.pinimg.com/236x/aa/2a/95/aa2a950fcb3d038f0661da5dc1bd5161.jpg" alt="Tandoori">
-                    <h4 class="item-name">Tandoori</h4>
-                    <p class="item-price">$12.99</p>
-                    <button class="add-to-cart" onclick="addToCart('Tandoori', 12.99)">Add to Cart</button>
+                    <video autoplay muted loop>
+                        <source src="https://v.ftcdn.net/11/43/19/45/700_F_1143194588_cif0gjDA4kgAVCXxI0fOQVEP5EFlFcLg_ST.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <ul class="nav-links">
+                        <li><a href="Deserts.html">Deserts</a></li>
+                    </ul>
                 </div>
-
                 <div class="menu-item">
-                    <img src="https://i.pinimg.com/236x/ae/b8/a8/aeb8a8b359c017333621eb7b15d47afe.jpg" alt="Chicken 555">
-                    <h4 class="item-name">Chicken 555</h4>
-                    <p class="item-price">$14.99</p>
-                    <button class="add-to-cart" onclick="addToCart('Chicken 555', 14.99)">Add to Cart</button>
+                    <video autoplay muted loop>
+                        <source src="https://v.ftcdn.net/11/06/81/26/700_F_1106812631_1zCnbOrGU8uwhuqezbaH7iqPQdx3QLJM_ST.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <ul class="nav-links">
+                        <li><a href="Sweets.html">Sweets</a></li>
+                    </ul>
                 </div>
-
-                <!-- Repeat similar blocks for other non-veg starter items -->
-            </div>
-        </div>
-
-        <!-- Veg Starters Section -->
-        <div class="menu-section">
-            <h2>VEG STARTERS</h2>
-            <div class="menu-grid">
-                <div class="menu-item">
-                    <img src="https://i.pinimg.com/enabled_lo/236x/f4/9d/97/f49d97cb1fd022c9914d12d2f973ac13.jpg" alt="Crispy Corn">
-                    <h4 class="item-name">Crispy Corn</h4>
-                    <p class="item-price">$11.99</p>
-                    <button class="add-to-cart" onclick="addToCart('Crispy Corn', 11.99)">Add to Cart</button>
-                </div>
-
-                <div class="menu-item">
-                    <img src="https://i.pinimg.com/236x/b0/8c/cd/b08ccd412f6066fe59ff7c81f06b9b4b.jpg" alt="Crispy Veg">
-                    <h4 class="item-name">Crispy Veg</h4>
-                    <p class="item-price">$13.99</p>
-                    <button class="add-to-cart" onclick="addToCart('Crispy Veg', 13.99)">Add to Cart</button>
-                </div>
-
-                <!-- Repeat similar blocks for other veg starter items -->
             </div>
         </div>
 
         <!-- Shakes Section -->
         <div class="menu-section">
-            <h2>SHAKES</h2>
             <div class="menu-grid">
                 <div class="menu-item">
-                    <img src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2018/4/2/3/LS-Library_Cherry-Almond-Smoothie_s4x3.jpg.rend.hgtvcom.791.594.85.suffix/1522725245192.webp" alt="Cherry-Almond Smoothie">
-                    <h4 class="item-name">Cherry-Almond Smoothie</h4>
-                    <p class="item-price">$11.99</p>
-                    <button class="add-to-cart" onclick="addToCart('Cherry-Almond Smoothie', 11.99)">Add to Cart</button>
+                    <video autoplay muted loop>
+                        <source src="https://videos.pexels.com/video-files/3031969/3031969-hd_1920_1080_24fps.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <ul class="nav-links">
+                        <li><a href="Shakes.html">Shakes</a></li>
+                    </ul>
                 </div>
-
                 <div class="menu-item">
-                    <img src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2016/9/28/1/HXSP01ZH_Cotton-Candy-Milkshake_s3x4.jpg.rend.hgtvcom.791.1055.85.suffix/1475539317893.webp" alt="Cotton Candy Milkshake">
-                    <h4 class="item-name">Cotton Candy Milkshake</h4>
-                    <p class="item-price">$14.99</p>
-                    <button class="add-to-cart" onclick="addToCart('Cotton Candy Milkshake', 14.99)">Add to Cart</button>
+                    <video autoplay muted loop>
+                        <source src="https://videos.pexels.com/video-files/5060123/5060123-uhd_2732_1440_30fps.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <ul class="nav-links">
+                        <li><a href="Ice Creams.html">Ice Creams</a></li>
+                    </ul>
                 </div>
-
-                <!-- Repeat similar blocks for other shake items -->
-            </div>
-        </div>
-
-        <!-- Salad Section -->
-        <div class="menu-section">
-            <h2>SALAD</h2>
-            <div class="menu-grid">
-                <div class="menu-item">
-                    <img src="https://i.pinimg.com/236x/19/ff/4b/19ff4b8d5392b1d384f8fbcf0c8e187d.jpg" alt="Caesar Salad">
-                    <h4 class="item-name">Caesar Salad</h4>
-                    <p class="item-price">$3.95</p>
-                    <button class="add-to-cart" onclick="addToCart('Caesar Salad', 3.95)">Add to Cart</button>
-                </div>
-
-                <div class="menu-item">
-                    <img src="https://i.pinimg.com/236x/83/93/eb/8393ebbbf4e8ce3e82f06963beb66bd0.jpg" alt="Cobb Salad">
-                    <h4 class="item-name">Cobb Salad</h4>
-                    <p class="item-price">$4.95</p>
-                    <button class="add-to-cart" onclick="addToCart('Cobb Salad', 4.95)">Add to Cart</button>
-                </div>
-
-                <!-- Repeat similar blocks for other salad items -->
             </div>
         </div>
 
         <!-- Moktails Section -->
         <div class="menu-section">
-            <h2>MOKTAILS</h2>
             <div class="menu-grid">
                 <div class="menu-item">
-                    <img src="https://static.toiimg.com/thumb/imgsize-247346,msid-69483400,width-600,height-335,resizemode-75/69483400.jpg" alt="Sparkling Cherry Limeade">
-                    <h4 class="item-name">Sparkling Cherry Limeade</h4>
-                    <p class="item-price">$14.99</p>
-                    <button class="add-to-cart" onclick="addToCart('Sparkling Cherry Limeade', 14.99)">Add to Cart</button>
+                    <video autoplay muted loop>
+                        <source src="https://media.istockphoto.com/id/484038676/video/bartender-pouring-cocktails-on-counter.mp4?s=mp4-640x640-is&k=20&c=B49krRoYcmpPYaERoOCGhOP-XlRu4hO3jyjJbHuVAqQ=" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <ul class="nav-links">
+                        <li><a href="Mocktails.html">Mocktails</a></li>
+                    </ul>
                 </div>
-
-                <div class="menu-item">
-                    <img src="https://static.toiimg.com/thumb/imgsize-144146,msid-69483389,width-600,height-335,resizemode-75/69483389.jpg" alt="Berry Patch Mocktail">
-                    <h4 class="item-name">Berry Patch Mocktail</h4>
-                    <p class="item-price">$9.22</p>
-                    <button class="add-to-cart" onclick="addToCart('Berry Patch Mocktail', 9.22)">Add to Cart</button>
-                </div>
-
-                <!-- Repeat similar blocks for other moktail items -->
             </div>
         </div>
     </div>
 
-    <script>
-        function addToCart(itemName, itemPrice) {
-            alert(`Added ${itemName} to cart for $${itemPrice}`);
-            // You can add more complex cart logic here
-        }
-    </script>
 </body>
 </html>
