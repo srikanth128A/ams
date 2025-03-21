@@ -213,7 +213,6 @@
                 <p><strong>Email:</strong> <span id="confirmation-email"></span></p>
                 <p><strong>Number of Guests:</strong> <span id="confirmation-guests"></span></p>
             </div>
-            <button onclick="resetForm()">Book Another Event</button>
         </section>
     </main>
 
@@ -329,14 +328,6 @@
 
         function closeBookingForm() {
             document.getElementById('booking-form-section').classList.add('hidden');
-        }
-
-        function resetForm() {
-            document.getElementById('festival-select').value = '';
-            document.getElementById('festival-details').classList.add('hidden');
-            document.getElementById('booking-form-section').classList.add('hidden');
-            document.getElementById('confirmation-section').classList.add('hidden');
-            document.getElementById('booking-form').reset();
         }
 
         document.getElementById('booking-form').addEventListener('submit', function(event) {
